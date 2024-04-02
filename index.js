@@ -1,4 +1,3 @@
-// Initially display all products
 fetch("https://dummyjson.com/products")
     .then((response) => {
         return response.json();
@@ -7,7 +6,6 @@ fetch("https://dummyjson.com/products")
         displayProducts(data.products);
     });
 
-// Event listeners for category buttons
 document.getElementById("smartphones").addEventListener("click", () => {
     search("smartphones");
 });
@@ -32,12 +30,10 @@ document.getElementById("home-decoration").addEventListener("click", () => {
     search("home-decoration");
 });
 
-// Event listener for search input
 document.getElementById("search").addEventListener("input", () => {
     search();
 });
 
-// Search function with optional category parameter
 const search = (category = "") => {
     const query = document.getElementById("search").value.toLowerCase();
 
